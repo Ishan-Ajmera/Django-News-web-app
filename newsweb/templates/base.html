@@ -1,0 +1,709 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>{% block title %}
+        {% endblock title %} </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/static/img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Navbar Area -->
+        <div class="mag-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="magNav">
+
+                    <!-- Nav brand -->
+                    <a href="index.html" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Nav Content -->
+                    <div class="nav-content d-flex align-items-center">
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a href="/">Home</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="archive.html">Archive</a></li>
+                                            <li><a href="video-post.html">Single Video Post</a></li>
+                                            <li><a href="single-post.html">Single Post</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="submit-video.html">Submit Video</a></li>
+                                            <li><a href="login.html">Login</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#">Business</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/argentina-business">Argentina</a></li>
+                                                <li><a href="/australia-business">Australia</a></li>
+                                                <li><a href="/austria-business">Austria</a></li>
+                                                <li><a href="/belgium-business">Belgium</a></li>
+                                                <li><a href="/brazil-business">Brazil</a></li>
+                                                <li><a href="/bulgaria-business">Bulgaria</a></li>
+                                                <li><a href="/canada-business">Canada</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/china-business">China</a></li>
+                                                <li><a href="/colombia-business">Colombia</a></li>
+                                                <li><a href="/cuba-business">Cuba</a></li>
+                                                <li><a href="/czech-republic-business">Czech Republic</a></li>
+                                                <li><a href="/egypt-business">Egypt</a></li>
+                                                <li><a href="/france-business">France</a></li>
+                                                <li><a href="/germany-business">Germany</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/greece-business">Greece</a></li>
+                                                <li><a href="/hong_kong-business">Hong Kong</a></li>
+                                                <li><a href="/hungary-business">Hungary</a></li>
+                                                <li><a href="/india-business">India</a></li>
+                                                <li><a href="/indonesia-business">Indonesia</a></li>
+                                                <li><a href="/ireland-business">Ireland</a></li>
+                                                <li><a href="/israel-business">Israel</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/italy-business">Italy</a></li>
+                                                <li><a href="/japan-business">Japan</a></li>
+                                                <li><a href="/latvia-business">Latvia</a></li>
+                                                <li><a href="/lithuania-business">Lithuania</a></li>
+                                                <li><a href="/malaysia-business">Malaysia</a></li>
+                                                <li><a href="/mexico-business">Mexico</a></li>
+                                                <li><a href="/morocco-business">Morocco</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/netherlands-business">Netherlands</a></li>
+                                                <li><a href="/NZ-business">New Zealand</a></li>
+                                                <li><a href="/nigeria-business">Nigeria</a></li>
+                                                <li><a href="/norway-business">Norway</a></li>
+                                                <li><a href="/philippines-business">Philippines</a></li>
+                                                <li><a href="/poland-business">Poland</a></li>
+                                                <li><a href="/portugal-business">Portugal</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/romania-business">Romania</a></li>
+                                                <li><a href="/russia-business">Russia</a></li>
+                                                <li><a href="/saudi-arabia-business">Saudi Arabia</a></li>
+                                                <li><a href="/serbia-business">Serbia</a></li>
+                                                <li><a href="/singapore-business">Singapore</a></li>
+                                                <li><a href="/slovakia-business">Slovakia</a></li>
+                                                <li><a href="/slovenia-business">Slovenia</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/south-africa-business">South Africa</a></li>
+                                                <li><a href="/south-korea-business">South Korea</a></li>
+                                                <li><a href="/sweden-business">Sweden</a></li>
+                                                <li><a href="/switzerland-business">Switzerland</a></li>
+                                                <li><a href="/taiwan-business">Taiwan</a></li>
+                                                <li><a href="/thailand-business">Thailand</a></li>
+                                                <li><a href="/turkey-business">Turkey</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/UAE-business">UAE</a></li>
+                                                <li><a href="/ukraine-business">Ukraine</a></li>
+                                                <li><a href="/UK-business">United Kingdom</a></li>
+                                                <li><a href="/US-business">United States</a></li>
+                                                <li><a href="/venuzuela-business">Venuzuela</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">Entertainment</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/argentina-entertainment">Argentina</a></li>
+                                                <li><a href="/australia-entertainment">Australia</a></li>
+                                                <li><a href="/austria-entertainment">Austria</a></li>
+                                                <li><a href="/belgium-entertainment">Belgium</a></li>
+                                                <li><a href="/brazil-entertainment">Brazil</a></li>
+                                                <li><a href="/bulgaria-entertainment">Bulgaria</a></li>
+                                                <li><a href="/canada-entertainment">Canada</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/china-entertainment">China</a></li>
+                                                <li><a href="/colombia-entertainment">Colombia</a></li>
+                                                <li><a href="/cuba-entertainment">Cuba</a></li>
+                                                <li><a href="/czech-republic-entertainment">Czech Republic</a></li>
+                                                <li><a href="/egypt-entertainment">Egypt</a></li>
+                                                <li><a href="/france-entertainment">France</a></li>
+                                                <li><a href="/germany-entertainment">Germany</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/greece-entertainment">Greece</a></li>
+                                                <li><a href="/hong_kong-entertainment">Hong Kong</a></li>
+                                                <li><a href="/hungary-entertainment">Hungary</a></li>
+                                                <li><a href="/india-entertainment">India</a></li>
+                                                <li><a href="/indonesia-entertainment">Indonesia</a></li>
+                                                <li><a href="/ireland-entertainment">Ireland</a></li>
+                                                <li><a href="/israel-entertainment">Israel</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/italy-entertainment">Italy</a></li>
+                                                <li><a href="/japan-entertainment">Japan</a></li>
+                                                <li><a href="/latvia-entertainment">Latvia</a></li>
+                                                <li><a href="/lithuania-entertainment">Lithuania</a></li>
+                                                <li><a href="/malaysia-entertainment">Malaysia</a></li>
+                                                <li><a href="/mexico-entertainment">Mexico</a></li>
+                                                <li><a href="/morocco-entertainment">Morocco</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/netherlands-entertainment">Netherlands</a></li>
+                                                <li><a href="/NZ-entertainment">New Zealand</a></li>
+                                                <li><a href="/nigeria-entertainment">Nigeria</a></li>
+                                                <li><a href="/norway-entertainment">Norway</a></li>
+                                                <li><a href="/philippines-entertainment">Philippines</a></li>
+                                                <li><a href="/poland-entertainment">Poland</a></li>
+                                                <li><a href="/portugal-entertainment">Portugal</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/romania-entertainment">Romania</a></li>
+                                                <li><a href="/russia-entertainment">Russia</a></li>
+                                                <li><a href="/saudi-arabia-entertainment">Saudi Arabia</a></li>
+                                                <li><a href="/serbia-entertainment">Serbia</a></li>
+                                                <li><a href="/singapore-entertainment">Singapore</a></li>
+                                                <li><a href="/slovakia-entertainment">Slovakia</a></li>
+                                                <li><a href="/slovenia-entertainment">Slovenia</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/south-africa-entertainment">South Africa</a></li>
+                                                <li><a href="/south-korea-entertainment">South Korea</a></li>
+                                                <li><a href="/sweden-entertainment">Sweden</a></li>
+                                                <li><a href="/switzerland-entertainment">Switzerland</a></li>
+                                                <li><a href="/taiwan-entertainment">Taiwan</a></li>
+                                                <li><a href="/thailand-entertainment">Thailand</a></li>
+                                                <li><a href="/turkey-entertainment">Turkey</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/UAE-entertainment">UAE</a></li>
+                                                <li><a href="/ukraine-entertainment">Ukraine</a></li>
+                                                <li><a href="/UK-entertainment">United Kingdom</a></li>
+                                                <li><a href="/US-entertainment">United States</a></li>
+                                                <li><a href="/venuzuela-entertainment">Venuzuela</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">Health</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/argentina-health">Argentina</a></li>
+                                                <li><a href="/australia-health">Australia</a></li>
+                                                <li><a href="/austria-health">Austria</a></li>
+                                                <li><a href="/belgium-health">Belgium</a></li>
+                                                <li><a href="/brazil-health">Brazil</a></li>
+                                                <li><a href="/bulgaria-health">Bulgaria</a></li>
+                                                <li><a href="/canada-health">Canada</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/china-health">China</a></li>
+                                                <li><a href="/colombia-health">Colombia</a></li>
+                                                <li><a href="/cuba-health">Cuba</a></li>
+                                                <li><a href="/czech-republic-health">Czech Republic</a></li>
+                                                <li><a href="/egypt-health">Egypt</a></li>
+                                                <li><a href="/france-health">France</a></li>
+                                                <li><a href="/germany-health">Germany</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/greece-health">Greece</a></li>
+                                                <li><a href="/hong_kong-health">Hong Kong</a></li>
+                                                <li><a href="/hungary-health">Hungary</a></li>
+                                                <li><a href="/india-health">India</a></li>
+                                                <li><a href="/indonesia-health">Indonesia</a></li>
+                                                <li><a href="/ireland-health">Ireland</a></li>
+                                                <li><a href="/israel-health">Israel</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/italy-health">Italy</a></li>
+                                                <li><a href="/japan-health">Japan</a></li>
+                                                <li><a href="/latvia-health">Latvia</a></li>
+                                                <li><a href="/lithuania-health">Lithuania</a></li>
+                                                <li><a href="/malaysia-health">Malaysia</a></li>
+                                                <li><a href="/mexico-health">Mexico</a></li>
+                                                <li><a href="/morocco-health">Morocco</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/netherlands-health">Netherlands</a></li>
+                                                <li><a href="/NZ-health">New Zealand</a></li>
+                                                <li><a href="/nigeria-health">Nigeria</a></li>
+                                                <li><a href="/norway-health">Norway</a></li>
+                                                <li><a href="/philippines-health">Philippines</a></li>
+                                                <li><a href="/poland-health">Poland</a></li>
+                                                <li><a href="/portugal-health">Portugal</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/romania-health">Romania</a></li>
+                                                <li><a href="/russia-health">Russia</a></li>
+                                                <li><a href="/saudi-arabia-health">Saudi Arabia</a></li>
+                                                <li><a href="/serbia-health">Serbia</a></li>
+                                                <li><a href="/singapore-health">Singapore</a></li>
+                                                <li><a href="/slovakia-health">Slovakia</a></li>
+                                                <li><a href="/slovenia-health">Slovenia</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/south-africa-health">South Africa</a></li>
+                                                <li><a href="/south-korea-health">South Korea</a></li>
+                                                <li><a href="/sweden-health">Sweden</a></li>
+                                                <li><a href="/switzerland-health">Switzerland</a></li>
+                                                <li><a href="/taiwan-health">Taiwan</a></li>
+                                                <li><a href="/thailand-health">Thailand</a></li>
+                                                <li><a href="/turkey-health">Turkey</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/UAE-health">UAE</a></li>
+                                                <li><a href="/ukraine-health">Ukraine</a></li>
+                                                <li><a href="/UK-health">United Kingdom</a></li>
+                                                <li><a href="/US-health">United States</a></li>
+                                                <li><a href="/venuzuela-health">Venuzuela</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">Science</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/argentina-science">Argentina</a></li>
+                                                <li><a href="/australia-science">Australia</a></li>
+                                                <li><a href="/austria-science">Austria</a></li>
+                                                <li><a href="/belgium-science">Belgium</a></li>
+                                                <li><a href="/brazil-science">Brazil</a></li>
+                                                <li><a href="/bulgaria-science">Bulgaria</a></li>
+                                                <li><a href="/canada-science">Canada</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/china-science">China</a></li>
+                                                <li><a href="/colombia-science">Colombia</a></li>
+                                                <li><a href="/cuba-science">Cuba</a></li>
+                                                <li><a href="/czech-republic-science">Czech Republic</a></li>
+                                                <li><a href="/egypt-science">Egypt</a></li>
+                                                <li><a href="/france-science">France</a></li>
+                                                <li><a href="/germany-science">Germany</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/greece-science">Greece</a></li>
+                                                <li><a href="/hong_kong-science">Hong Kong</a></li>
+                                                <li><a href="/hungary-science">Hungary</a></li>
+                                                <li><a href="/india-science">India</a></li>
+                                                <li><a href="/indonesia-science">Indonesia</a></li>
+                                                <li><a href="/ireland-science">Ireland</a></li>
+                                                <li><a href="/israel-science">Israel</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/italy-science">Italy</a></li>
+                                                <li><a href="/japan-science">Japan</a></li>
+                                                <li><a href="/latvia-science">Latvia</a></li>
+                                                <li><a href="/lithuania-science">Lithuania</a></li>
+                                                <li><a href="/malaysia-science">Malaysia</a></li>
+                                                <li><a href="/mexico-science">Mexico</a></li>
+                                                <li><a href="/morocco-science">Morocco</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/netherlands-science">Netherlands</a></li>
+                                                <li><a href="/NZ-science">New Zealand</a></li>
+                                                <li><a href="/nigeria-science">Nigeria</a></li>
+                                                <li><a href="/norway-science">Norway</a></li>
+                                                <li><a href="/philippines-science">Philippines</a></li>
+                                                <li><a href="/poland-science">Poland</a></li>
+                                                <li><a href="/portugal-science">Portugal</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/romania-science">Romania</a></li>
+                                                <li><a href="/russia-science">Russia</a></li>
+                                                <li><a href="/saudi-arabia-science">Saudi Arabia</a></li>
+                                                <li><a href="/serbia-science">Serbia</a></li>
+                                                <li><a href="/singapore-science">Singapore</a></li>
+                                                <li><a href="/slovakia-science">Slovakia</a></li>
+                                                <li><a href="/slovenia-science">Slovenia</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/south-africa-science">South Africa</a></li>
+                                                <li><a href="/south-korea-science">South Korea</a></li>
+                                                <li><a href="/sweden-science">Sweden</a></li>
+                                                <li><a href="/switzerland-science">Switzerland</a></li>
+                                                <li><a href="/taiwan-science">Taiwan</a></li>
+                                                <li><a href="/thailand-science">Thailand</a></li>
+                                                <li><a href="/turkey-science">Turkey</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/UAE-science">UAE</a></li>
+                                                <li><a href="/ukraine-science">Ukraine</a></li>
+                                                <li><a href="/UK-science">United Kingdom</a></li>
+                                                <li><a href="/US-science">United States</a></li>
+                                                <li><a href="/venuzuela-science">Venuzuela</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">Sports</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/argentina-sports">Argentina</a></li>
+                                                <li><a href="/australia-sports">Australia</a></li>
+                                                <li><a href="/austria-sports">Austria</a></li>
+                                                <li><a href="/belgium-sports">Belgium</a></li>
+                                                <li><a href="/brazil-sports">Brazil</a></li>
+                                                <li><a href="/bulgaria-sports">Bulgaria</a></li>
+                                                <li><a href="/canada-sports">Canada</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/china-sports">China</a></li>
+                                                <li><a href="/colombia-sports">Colombia</a></li>
+                                                <li><a href="/cuba-sports">Cuba</a></li>
+                                                <li><a href="/czech-republic-sports">Czech Republic</a></li>
+                                                <li><a href="/egypt-sports">Egypt</a></li>
+                                                <li><a href="/france-sports">France</a></li>
+                                                <li><a href="/germany-sports">Germany</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/greece-sports">Greece</a></li>
+                                                <li><a href="/hongkong-sports">Hong Kong</a></li>
+                                                <li><a href="/hungary-sports">Hungary</a></li>
+                                                <li><a href="/india-sports">India</a></li>
+                                                <li><a href="/indonesia-sports">Indonesia</a></li>
+                                                <li><a href="/ireland-sports">Ireland</a></li>
+                                                <li><a href="/italy-sports">Italy</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/japan-sports">Japan</a></li>
+                                                <li><a href="/latvia-sports">Latvia</a></li>
+                                                <li><a href="/lithuania-sports">Lithuania</a></li>
+                                                <li><a href="/malaysia-sports">Malaysia</a></li>
+                                                <li><a href="/mexico-sports">Mexico</a></li>
+                                                <li><a href="/morocco-sports">Morocco</a></li>
+                                                <li><a href="/netherlands-sports">Netherlands</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/NZ-sports">New Zealand</a></li>
+                                                <li><a href="/nigeria-sports">Nigeria</a></li>
+                                                <li><a href="/norway-sports">Norway</a></li>
+                                                <li><a href="/philippines-sports">Philippines</a></li>
+                                                <li><a href="/poland-sports">Poland</a></li>
+                                                <li><a href="/portugal-sports">Portugal</a></li>
+                                                <li><a href="/romania-sports">Romania</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/russia-sports">Russia</a></li>
+                                                <li><a href="/saudi-arabia-sports">Saudi Arabia</a></li>
+                                                <li><a href="/serbia-sports">Serbia</a></li>
+                                                <li><a href="/singapore-sports">Singapore</a></li>
+                                                <li><a href="/slovakia-sports">Slovakia</a></li>
+                                                <li><a href="/slovenia-sports">Slovenia</a></li>
+                                                <li><a href="/southafrica-sports">South Africa</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/southkorea-sports">South Korea</a></li>
+                                                <li><a href="/sweden-sports">Sweden</a></li>
+                                                <li><a href="/switzerland-sports">Switzerland</a></li>
+                                                <li><a href="/taiwan-sports">Taiwan</a></li>
+                                                <li><a href="/thailand-sports">Thailand</a></li>
+                                                <li><a href="/turkey-sports">Turkey</a></li>
+                                                <li><a href="/uae-sports">UAE</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/ukraine-sports">Ukraine</a></li>
+                                                <li><a href="/UK-sports">United Kingdom</a></li>
+                                                <li><a href="/US-sports">United States</a></li>
+                                                <li><a href="/venuzuela-sports">Venuzuela</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">Technology</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/argentina-technology">Argentina</a></li>
+                                                <li><a href="/australia-technology">Australia</a></li>
+                                                <li><a href="/austria-technology">Austria</a></li>
+                                                <li><a href="/belgium-technology">Belgium</a></li>
+                                                <li><a href="/brazil-technology">Brazil</a></li>
+                                                <li><a href="/bulgaria-technology">Bulgaria</a></li>
+                                                <li><a href="/canada-technology">Canada</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/china-technology">China</a></li>
+                                                <li><a href="/colombia-technology">Colombia</a></li>
+                                                <li><a href="/cuba-technology">Cuba</a></li>
+                                                <li><a href="/czech-republic-technology">Czech Republic</a></li>
+                                                <li><a href="/egypt-technology">Egypt</a></li>
+                                                <li><a href="/france-technology">France</a></li>
+                                                <li><a href="/germany-technology">Germany</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/greece-technology">Greece</a></li>
+                                                <li><a href="/hong_kong-technology">Hong Kong</a></li>
+                                                <li><a href="/hungary-technology">Hungary</a></li>
+                                                <li><a href="/india-technology">India</a></li>
+                                                <li><a href="/indonesia-technology">Indonesia</a></li>
+                                                <li><a href="/ireland-technology">Ireland</a></li>
+                                                <li><a href="/israel-technology">Israel</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/italy-technology">Italy</a></li>
+                                                <li><a href="/japan-technology">Japan</a></li>
+                                                <li><a href="/latvia-technology">Latvia</a></li>
+                                                <li><a href="/lithuania-technology">Lithuania</a></li>
+                                                <li><a href="/malaysia-technology">Malaysia</a></li>
+                                                <li><a href="/mexico-technology">Mexico</a></li>
+                                                <li><a href="/morocco-technology">Morocco</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/netherlands-technology">Netherlands</a></li>
+                                                <li><a href="/NZ-technology">New Zealand</a></li>
+                                                <li><a href="/nigeria-technology">Nigeria</a></li>
+                                                <li><a href="/norway-technology">Norway</a></li>
+                                                <li><a href="/philippines-technology">Philippines</a></li>
+                                                <li><a href="/poland-technology">Poland</a></li>
+                                                <li><a href="/portugal-technology">Portugal</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/romania-technology">Romania</a></li>
+                                                <li><a href="/russia-technology">Russia</a></li>
+                                                <li><a href="/saudi-arabia-technology">Saudi Arabia</a></li>
+                                                <li><a href="/serbia-technology">Serbia</a></li>
+                                                <li><a href="/singapore-technology">Singapore</a></li>
+                                                <li><a href="/slovakia-technology">Slovakia</a></li>
+                                                <li><a href="/slovenia-technology">Slovenia</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/south-africa-technology">South Africa</a></li>
+                                                <li><a href="/south-korea-technology">South Korea</a></li>
+                                                <li><a href="/sweden-technology">Sweden</a></li>
+                                                <li><a href="/switzerland-technology">Switzerland</a></li>
+                                                <li><a href="/taiwan-technology">Taiwan</a></li>
+                                                <li><a href="/thailand-technology">Thailand</a></li>
+                                                <li><a href="/turkey-technology">Turkey</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="/UAE-technology">UAE</a></li>
+                                                <li><a href="/ukraine-technology">Ukraine</a></li>
+                                                <li><a href="/UK-technology">United Kingdom</a></li>
+                                                <li><a href="/US-technology">United States</a></li>
+                                                <li><a href="/venuzuela-technology">Venuzuela</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="/about">About</a></li>
+                                    <li><a href="/contact">Contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+
+                        <div class="top-meta-data d-flex align-items-center">
+                            <!-- Top Search Area -->
+                            <div class="top-search-area">
+                                <form action="index.html" method="post">
+                                    <input type="search" name="top-search" id="topSearch"
+                                        placeholder="Search and hit enter...">
+                                    <button type="submit" class="btn"><i class="fa fa-search"
+                                            aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    {% block body %}
+    {% endblock body %}
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <!-- Logo -->
+                        <a href="index.html" class="foo-logo"><img src="{% static 'img/core-img/logo2.png' %}"
+                                alt=""></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <div class="footer-social-info">
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">Categories</h6>
+                        <nav class="footer-widget-nav">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Life
+                                        Style</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Tech</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Travel</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Music</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Foods</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Fashion</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Game</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Football</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sports</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> TV Show</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">Sport Videos</h6>
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post style-2 d-flex">
+                            <div class="post-thumbnail">
+                                <img src="{% static 'img/bg-img/12.jpg' %}" alt="">
+                            </div>
+                            <div class="post-content">
+                                <a href="single-post.html" class="post-title">Take A Romantic Break In A Boutique
+                                    Hotel</a>
+                                <div class="post-meta d-flex justify-content-between">
+                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post style-2 d-flex">
+                            <div class="post-thumbnail">
+                                <img src="{% static 'img/bg-img/13.jpg' %}" alt="">
+                            </div>
+                            <div class="post-content">
+                                <a href="single-post.html" class="post-title">Travel Prudently Luggage And Carry On</a>
+                                <div class="post-meta d-flex justify-content-between">
+                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">Channels</h6>
+                        <ul class="footer-tags">
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Fashionista</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">DESIGN</a></li>
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">TRENDING</a></li>
+                            <li><a href="#">VIDEO</a></li>
+                            <li><a href="#">Game</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Foods</a></li>
+                            <li><a href="#">TV Show</a></li>
+                            <li><a href="#">Twitter Video</a></li>
+                            <li><a href="#">Playing</a></li>
+                            <li><a href="#">clips</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copywrite Area -->
+        <div class="copywrite-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-sm-6">
+                        <p class="copywrite-text">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Advertisement</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+
+</body>
+
+</html>

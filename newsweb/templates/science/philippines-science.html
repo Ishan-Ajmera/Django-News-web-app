@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %} Philippines Science
+{% endblock title %}
+{% block body %}
+<div id="colorlib-page">
+    <a href="{{x.url}}" target="_blank" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
+        <div class="container px-0">
+            <div class="row card-deck">
+                {% for x in api.articles %}
+                <div class="col-md-4   d-flex">
+                    <div class="blog-entry ftco-animate active">
+                            <div class="item">
+                                <img src="{{x.urlToImage}}" class="img-fluid" alt="{{x.source.name}}">
+                            </div>
+                        
+                        <div class="text p-4">
+                            <h3 class="mb-2"><a href="{{x.url}}" target="_blank">{{x.title}}</a></h3>
+                            <div class="meta-wrap">
+                                <p class="meta">
+                                    <span><i class="icon-calendar mr-2"></i> </span>
+                                    <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                                    <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                                </p>
+                            </div>
+                            <p class="mb-4">{{x.description | truncatechars:100}}</p>
+                            <p><a href="{{x.url}}" target="_blank" class="btn-custom">Read More <span
+                                        class="ion-ios-arrow-forward"></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+</div><!-- END COLORLIB-MAIN -->
+
+
+
+
+{% endblock body %}

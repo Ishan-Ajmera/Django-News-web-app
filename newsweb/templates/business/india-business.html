@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% block title %} India Business
+{% endblock title %}
+{% block body %}
+<div class="container">
+
+    <div class="row my-3">
+        {% for x in api.articles %}
+        <div class="col-sm my-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{x.urlToImage}}" class="card-img-top" alt="{{x.source.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{x.title}}</h5>
+                    <p class="card-text">{{x.description | truncatechars:100}}</p>
+                    <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% comment %} 
+<div id="colorlib-page">
+    <a href="{{x.url}}" target="_blank" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
+        <div class="container px-0">
+            {% for x in api.articles %}
+                <div class="col mb-4">
+                    <div class="card h-100">
+
+                        <img src="{{x.urlToImage}}" class="card-img-top" alt="{{x.source.name}}">
+                        <div class="card-body">
+                            <h5 href="{{x.url}}" class="card-title">{{x.title}}</h5>
+                            <p class="card-text">{{x.description | truncatechars:100}}</p>
+
+                            <a href="{{x.url}}" target="_blank" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+            
+            {% endfor %}
+        </div>
+
+</div> {% endcomment %}
+</div><!-- END COLORLIB-MAIN -->
+</div><!-- END COLORLIB-PAGE -->
+
+
+{% endblock body %}
+
+<div class="col-md-4 d-flex">
+    <div class="blog-entry ftco-animate">
+        <div class="carousel-blog owl-carousel">
+            <div class="item">
+                <img src="{{x.urlToImage}}" class="img-fluid" alt="{{x.source.name}}">
+            </div>
+        </div>
+        <div class="text p-4">
+            <h2 class="font-weight-600 mb-2">{{x.title}}</h2>
+            <div class="meta-wrap">
+                <p class="meta">
+                    <span><i class="icon-calendar mr-2"></i> </span>
+                    <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                    <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                </p>
+            </div>
+            <p class="fs-15">{{x.description | truncatechars:100}}</p>
+            <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 d-flex">
+    <div class="blog-entry ftco-animate">
+        <div class="carousel-blog owl-carousel">
+            <div class="item">
+                <img src="{{x.urlToImage}}" class="img-fluid" alt="{{x.source.name}}">
+            </div>
+        </div>
+        <div class="text p-4">
+            <h2 class="font-weight-600 mb-2">{{x.title}}</h2>
+            <div class="meta-wrap">
+                <p class="meta">
+                    <span><i class="icon-calendar mr-2"></i> </span>
+                    <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                    <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                </p>
+            </div>
+            <p class="fs-15">{{x.description | truncatechars:100}}</p>
+            <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-8 d-flex">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="blog-entry ftco-animate d-md-flex align-items-center">
+                <a href="{{x.url}}" class="img img-2" style="background-image: url(static\media\test.jpg);"></a>
+                <div class="text text-2 p-4">
+                    <h2 class="font-weight-600 mb-2">{{x.title}}</h2>
+                    <div class="meta-wrap">
+                        <p class="meta">
+                            <span><i class="icon-calendar mr-2"></i> </span>
+                            <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                            <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                        </p>
+                    </div>
+                    <p class="fs-15">{{x.description | truncatechars:100}}</p>
+                    <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="blog-entry ftco-animate d-md-flex align-items-center">
+                <a href="{{x.url}}" class="img img-2 order-md-last"
+                    style="background-image: url(static\media\test.jpg);"></a>
+                <div class="text text-2 p-4 text-md-right">
+                    <h2 class="font-weight-600 mb-2">{{x.title}}</h2>
+                    <div class="meta-wrap">
+                        <p class="meta">
+                            <span><i class="icon-calendar mr-2"></i> </span>
+                            <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                            <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                        </p>
+                    </div>
+                    <p class="fs-15">{{x.description | truncatechars:100}}</p>
+                    <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 d-flex">
+    <div class="blog-entry ftco-animate">
+        <div class="carousel-blog owl-carousel">
+            <div class="item">
+                <img src="{{x.urlToImage}}" class="img-fluid" alt="{{x.source.name}}">
+            </div>
+        </div>
+        <div class="text p-4">
+            <h2 class="font-weight-600 mb-2">{{x.title}}</h2>
+            <div class="meta-wrap">
+                <p class="meta">
+                    <span><i class="icon-calendar mr-2"></i> </span>
+                    <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                    <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                </p>
+            </div>
+            <p class="fs-15">{{x.description | truncatechars:100}}</p>
+            <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 d-flex">
+    <div class="blog-entry ftco-animate">
+        <div class="carousel-blog owl-carousel">
+            <div class="item">
+                <img src="{{x.urlToImage}}" class="img-fluid" alt="{{x.source.name}}">
+            </div>
+        </div>
+        <div class="text p-4">
+            <h2 class="font-weight-600 mb-2">{{x.title}}</h2>
+            <div class="meta-wrap">
+                <p class="meta">
+                    <span><i class="icon-calendar mr-2"></i> </span>
+                    <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                    <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                </p>
+            </div>
+            <p class="fs-15">{{x.description | truncatechars:100}}</p>
+            <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 d-flex">
+    <div class="blog-entry ftco-animate d-flex flex-column-reverse">
+        <div class="carousel-blog owl-carousel">
+            <div class="item">
+                <img src="{{x.urlToImage}}" class="img-fluid" alt="{{x.source.name}}">
+            </div>
+        </div>
+        <div class="text p-4">
+            <h2 class="font-weight-600 mb-2">{{x.title}}</h2>
+            <div class="meta-wrap">
+                <p class="meta">
+                    <span><i class="icon-calendar mr-2"></i> </span>
+                    <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                    <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                </p>
+            </div>
+            <p class="fs-15">{{x.description | truncatechars:100}}</p>
+            <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 d-flex">
+    <div class="blog-entry ftco-animate">
+        <img src="{{x.urlToImage}}" class="img-fluid" alt="{{x.source.name}}">
+        <div class="text p-4">
+            <h2 class="font-weight-600 mb-2">{{x.title}}</h2>
+            <div class="meta-wrap">
+                <p class="meta">
+                    <span><i class="icon-calendar mr-2"></i> </span>
+                    <span><a href="{{x.url}}"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+                    <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+                </p>
+            </div>
+            <p class="fs-15">{{x.description | truncatechars:1000}}</p>
+            <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</div>
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
