@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 STATICFILES_DIRS = [
-    'D:\django\news\newsweb\static'
+    '\news\newsweb\static'
 ]
 
 # Application definition
